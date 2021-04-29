@@ -3,6 +3,9 @@ const express = require("express");
 const https = require("https");
 const app = express();
 const bodyParser = require("body-parser");
+const ejs= require("ejs");
+
+app.set('view engine', 'ejs');
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
@@ -10,7 +13,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/signup.html");
+  res.render("signup");
 
 });
 
@@ -41,9 +44,9 @@ app.post("/", function(req, res) {
   const request = https.request(url, options, function(response) {
 
         if (response.statusCode === 200) {
-          res.sendFile(__dirname + "/success.html");
+          res.render("success");
         } else {
-          res.sendFile(__dirname + "/failure.html");
+          res.render("failure");
         }
 
       response.on("data", function(data) {

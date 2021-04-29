@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Oops!</h1>
+    <p class="lead">There was some error while signing you up.Please try again!</p>
+    <form action="/failure" method="post">
+      <button class="btn btn-lg btn-danger" type="submit" name="button">Try Again</button>
+    </form>
+  </div>
+</div>
+<%- include("partials/footer.ejs") %>
