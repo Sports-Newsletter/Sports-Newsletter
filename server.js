@@ -14,11 +14,19 @@ app.use(bodyParser.urlencoded({
 
 app.get("/", function(req, res) {
   res.render("signup");
+});
 
+app.get("/about", function(req, res) {
+  res.render("about");
+});
+
+app.get("/contact", function(req, res) {
+  res.render("contact");
 });
 
 app.post("/", function(req, res) {
   const firstName = req.body.First;
+  console.log(firstName);
   const lastName = req.body.Last;
   const email = req.body.Email;
 
@@ -28,7 +36,7 @@ app.post("/", function(req, res) {
       status: "subscribed",
       merge_fields: {
         FNAME: firstName,
-        LNAME: lastName
+        LNAME: lastName,
       }
     }]
   }
