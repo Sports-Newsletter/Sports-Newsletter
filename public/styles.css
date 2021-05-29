@@ -1,10 +1,11 @@
 html,
-body {
+.new {
   height: 100%;
+  background-image: url("images/collage.jpg");
+  width: 100%;
 }
-
-body {
-
+body{
+  height: 100%;
 }
 
 .signup{
@@ -19,7 +20,7 @@ body {
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+
   text-align:center;
 }
 .form-signin {
@@ -54,4 +55,24 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.exciting{
+  font-weight: bolder;
+  color: white;
+}
+
+.contentnav{
+  font-size: 30px;
+}
+.newlogo{
+  width: 150px;
+  height: 150px;
+}
+
+
+@media (max-width:450px) {
+  .new{
+    background-image: url("images/collagenew.jpg");
+  }
+
 }

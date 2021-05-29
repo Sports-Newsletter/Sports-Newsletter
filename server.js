@@ -26,9 +26,11 @@ app.get("/contact", function(req, res) {
 
 app.post("/", function(req, res) {
   const firstName = req.body.First;
-  console.log(firstName);
   const lastName = req.body.Last;
   const email = req.body.Email;
+  console.log(req.body.football);
+  console.log(req.body.cricket);
+
 
   var data = {
     members: [{
